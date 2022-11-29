@@ -16,7 +16,8 @@ class kontakcontroller extends Controller
     public function index()
     {
         $data = Kontak::all();
-        return view('admin.masterkontak' , compact('data'));
+        $data1 = Siswa::all();
+        return view('admin.masterkontak' , compact('data','data1'));
     }
 
     /**
